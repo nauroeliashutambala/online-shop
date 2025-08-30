@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h2>M<span>Shop</span></h2>
+        </div>
+
+        <i class="fas fa-bars" onclick="abrir_menu()"></i>
+        <ul class="lista_menu">
+            <!-- <li><a href="#">Inicio</a></li> -->
+        </ul>
+    </nav>
+    <div class="principal">
+        <div class="menu open">
+
+        </div>
+        <main id="main">
+            <form class="search">
+                <input name="search" type="search" id="search_input" placeholder="Pesquise por algo aqui...">
+                <div class="select-wrapper">
+                    <select name="filter" id="filtro">
+                        <option value="Todos" disabled selected>Geral</option>
+                        <option value="E-books">E-books</option>
+                        <option value="Finanças">Finanças</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Bem-Estar">Bem-Estar</option>
+                        <option value="Alimentação">Alimentação</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-search">
+                    <i class="fas fa-search"></i>
+                </button>
+
+            </form>
+
+            <!-- Banner -->
+            <div class="banner">
+                <img src="assets/img/nauroo.jpg" alt="Promoção">
+                <div class="banner-content">
+                    <div class="banner-title">80% DESCONTO</div>
+                    <div class="banner-subtitle">Ganhe descontos grandes e ache o ideal para ti</div>
+                    <button class="banner-button">Avaliar</button>
+                </div>
+            </div>
+            <div class="container_cards" id="container_cards">
+                <div class="list" id="lista_de_cards">
+
+
+                    <a href="?get_product=8">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Decorador profissional e ativo</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 123.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=7">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Decorador profissional</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 123.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=6">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Atendente de bar e lojas</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 123.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=1">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Salão Lux 500 Pessoas</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 250.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=2">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Salão VIP Jardim</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 300.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=3">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Decoração Clássica</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 80.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=4">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Decoração Temática</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 120.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+
+
+
+                    <a href="?get_product=5">
+                        <div class="card">
+                            <div class="img" style="background-image: url(assets/img/folder.jpg);"></div>
+                            <div class="descricao_card">
+                                <h4 class="nome">Pacote Fotografia Premium</h4>
+
+                                <div class="linha">
+                                    <p class="localizacao">Preço: </p>
+                                    <p class="preco"> AOA 100.000,00</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/list.js"></script>
+    <script src="assets/js/menus.js"></script>
+    <script src="assets/js/search.js"></script>
+
+    <script>
+        async function carregarProdutos() {
+            const resposta = await fetch('get_products.php');
+            const produtos = await resposta.json();
+            const container = document.getElementById('lista_de_cards');
+            container.innerHTML = '';
+
+            produtos.forEach(prod => {
+                container.innerHTML += `
+                    ${gera_cards(prod.id, prod.nome, "assets/img/folder.jpg);", prod.preco)}
+                `;
+
+            });
+        }
+        async function pesquisar_Produtos(conteudo) {
+            const resposta = await fetch(`get_products.php?search=${conteudo}`);
+            const produtos = await resposta.json();
+            const container = document.getElementById('lista_de_cards');
+            container.innerHTML = '';
+
+            produtos.forEach(prod => {
+                container.innerHTML += `
+                    ${gera_cards(prod.id, prod.nome, "assets/img/folder.jpg", prod.preco)}
+                `;
+
+            });
+            document.querySelector("banner").classList.add("display_none")
+        }
+
+        async function favoritarProduto(id_produto) {
+            const resp = await fetch('favoritar.php', {
+                method: 'POST',
+                body: JSON.stringify({
+                    id_produto
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await resp.json();
+            if (data.status === "erro") {
+                showToast("Você precisa estar logado para favoritar.", "erro");
+                // Opcional: abrir modal de login
+            } else {
+                showToast("Produto favoritado!", "sucesso");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarProdutos);
+    </script>
+</body>
+
+</html>

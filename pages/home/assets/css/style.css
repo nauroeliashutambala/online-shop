@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 30px;
+    position: sticky;
+    box-shadow: 1px 3px 4px #33303052;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+nav i.fas.fa-bars {
+    display: none;
+}
+
+nav .logo {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    max-width: calc(100% - 100px);
+}
+
+/* Container da search bar */
+main .search {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 24px);
+    margin: 12px auto;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    z-index: 4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+main .search:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input da search */
+main .search input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Botão da search */
+main .search button {
+    border: none;
+    background-color: #ffa321;
+    color: #fff;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main .search button:hover {
+    background-color: #e5941f;
+    transform: scale(1.05);
+}
+
+/* Ícone dentro do botão */
+main .search button i {
+    font-size: 16px;
+}
+
+/* Select da search */
+main .search select {
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Option */
+main .search select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Ícone de menu nav (mantido) */
+nav img {
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 30px;
+    margin: 0 4px;
+    border-radius: 5px;
+    display: none;
+}
+
+.list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .3rem;
+}
+
+main {
+    padding: 12px;
+    overflow-y: auto;
+    height: auto;
+    display: inline-block;
+}
+
+a {
+    display: inline-flex;
+    width: 100%;
+    text-decoration: none;
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+        box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do card */
+.card .img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/folder.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Overlay da descrição */
+.card .descricao_card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 0 0 8px 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Nome do produto */
+.card .descricao_card .nome {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Localização */
+.card .descricao_card .localizacao {
+    font-size: 13px;
+    color: #d3c7c7;
+}
+
+/* Preço */
+.card .descricao_card .preco {
+    font-size: 16px;
+    color: #ffa321;
+    font-weight: bold;
+}
+
+
+.principal {
+    display: flex;
+
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper select {
+    appearance: none;
+    /* remove estilo padrão do select */
+    padding: 8px 32px 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Ícone à direita (Font Awesome) */
+.select-wrapper::after {
+    content: "\f0b0";
+    /* código da lupa no Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333;
+    font-size: 14px;
+}
+
+
+.menu {
+    min-width: 240px;
+    border: 1px solid #332f2f2f;
+    height: 100dvh;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    transition: .3s ease;
+}
+
+
+/* Item do menu */
+.menu .item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #302e2e;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover do item */
+.menu .item:hover {
+    color: #000;
+    background-color: rgba(200, 197, 197, 0.4);
+}
+
+/* Ícone dentro do item */
+.menu .item i {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Para o texto do item ocupar o restante do espaço */
+.menu .item div {
+    flex: 1;
+}
+
+/* Scroll suave se a lista for longa */
+.menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.linha.categoria h3 {
+    display: flex;
+    width: 100%;
+
+}
+
+.linha.categoria a {
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    text-align: right;
+    margin-right: 20px;
+    text-decoration: underline;
+    color: #1a1919;
+    width: auto;
+    min-width: 60px;
+}
+
+h2 span {
+    color: #b96e05;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: wavy;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: #464242;
+    display: flex;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.banner-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.banner-subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.banner-button {
+    background-color: #ffa321;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.display_none {
+    display: none;
+}
+
+
+
+
+
+
+/* ===================== Menor que 1200px ===================== */
+@media screen and (max-width: 1200px) {
+    nav {
+        padding: 6px 10px;
+    }
+
+    nav i.fas.fa-bars {
+        display: block;
+    }
+
+    .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav img {
+        display: inline;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        z-index: 5;
+    }
+
+    .menu.open {
+        position: fixed;
+        left: 0;
+        z-index: 5;
+    }
+
+    /* Cards */
+    .card {
+        max-width: 100%;
+        min-width: 45%;
+        height: 320px;
+        margin: 6px 1%;
+    }
+
+    .card .descricao_card .nome {
+        font-size: 15px;
+    }
+
+    .card .descricao_card .localizacao,
+    .card .descricao_card .preco {
+        font-size: 13px;
+    }
+}
+
+/* ===================== Menor que 900px ===================== */
+@media screen and (max-width: 900px) {
+    .list {
+        overflow-y: hidden;
+        overflow-x: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+
+    .menu {
+        position: absolute;
+        left: -100%;
+        z-index: 4;
+    }
+
+    /* Cards */
+    .card {
+        max-width: 100%;
+        min-width: 45%;
+        height: 300px;
+        margin: 6px 1%;
+    }
+
+    .card .descricao_card .nome {
+        font-size: 14px;
+    }
+
+    .card .descricao_card .localizacao,
+    .card .descricao_card .preco {
+        font-size: 12px;
+    }
+}
+
+/* ===================== Menor que 420px ===================== */
+@media screen and (max-width: 420px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .card {
+        max-width: 100%;
+        min-width: 100%;
+        height: 280px;
+        margin: 8px 0;
+    }
+
+    .card .descricao_card .nome {
+        font-size: 13px;
+    }
+
+    .card .descricao_card .localizacao,
+    .card .descricao_card .preco {
+        font-size: 12px;
+    }
+}
