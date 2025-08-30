@@ -1,6 +1,6 @@
 let search_input = document.getElementById("search_input");
 
-search_input.addEventListener("keydown", () => {
+search_input.addEventListener("input", () => {
     const value_to_search = search_input.value;
 
     if (!value_to_search == "") {
